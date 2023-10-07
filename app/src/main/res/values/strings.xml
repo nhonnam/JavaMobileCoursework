@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Coursework</string>
+    <string name="name">Name of the hike<font color='#FF0000'>*</font></string>
+    <string name="location">Location<font color='#FF0000'>*</font></string>
+    <string name="date">Date of the hike<font color='#FF0000'>*</font></string>
+    <string name="isParking">Parking available<font color='#FF0000'>*</font></string>
+    <string name="length">Length of hike<font color='#FF0000'>*</font></string>
+    <string name="level">Difficulty level<font color='#FF0000'>*</font></string>
+    <string name="description">Description<font color='#FF0000'>*</font></string>
+    <string-array name="levelSpinner">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+</resources>
