@@ -24,4 +24,6 @@ public interface HikeDao {
     void deleteAll();
     @Update
     void update(Hike hike);
+    @Query("SELECT * FROM hikes where name like '%' || :name || '%'")
+    List<Hike> findByName(String name);
 }

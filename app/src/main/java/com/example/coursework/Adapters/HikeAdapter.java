@@ -29,6 +29,10 @@ public class HikeAdapter extends RecyclerView.Adapter<HikeAdapter.ContactViewHol
         this.onDeleteClickListener = onDeleteClickListener;
     }
 
+    public HikeAdapter(List<Hike> hikes) {
+        this.hikes = hikes;
+    }
+
     @NonNull
     @Override
     public ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
