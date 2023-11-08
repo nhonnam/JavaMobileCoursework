@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment implements HikeAdapter.OnDeleteClickL
     public void onDeleteClick(Hike hike) {
         new AlertDialog.Builder(getActivity())
                 .setTitle("Delete Hike")
-                .setMessage("Are you sure you want to delete this hike?")
+                .setMessage("Are you sure you want to delete this hike: " + hike.name +"?")
                 .setPositiveButton("Delete", (dialog, which) -> {
                     appDatabase.hikeDao().delete(hike);
                     hikes.remove(hike);

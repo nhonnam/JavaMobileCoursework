@@ -81,7 +81,7 @@ public class EditActivity extends AppCompatActivity {
         String description = descriptionText.getText().toString().trim();
 
         if (name.isEmpty() || location.isEmpty() || date.equals("Date") || length.isEmpty()
-                || selectedRadioButtonId == -1 || description.isEmpty()) {
+                || selectedRadioButtonId == -1) {
             new AlertDialog.Builder(this)
                     .setTitle("Error")
                     .setMessage("All required fields must be filled.")

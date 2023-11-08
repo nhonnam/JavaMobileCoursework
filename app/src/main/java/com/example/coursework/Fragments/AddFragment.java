@@ -109,7 +109,7 @@ public class AddFragment extends Fragment {
         String description = descriptionText.getText().toString().trim();
 
         if (name.isEmpty() || location.isEmpty() || date.equals("Date") || length.isEmpty()
-            || selectedRadioButtonId == -1 || description.isEmpty()) {
+            || selectedRadioButtonId == -1) {
             new AlertDialog.Builder(getActivity())
                     .setTitle("Error")
                     .setMessage("All required fields must be filled.")
@@ -122,13 +122,15 @@ public class AddFragment extends Fragment {
         RadioButton selectedRadioButton = v.findViewById(selectedRadioButtonId);
         String parkingTag = (String) selectedRadioButton.getTag();
         long level = levelSpinner.getSelectedItemId();
+        String[] levelName = {"High", "Medium", "Low"};
 
         new AlertDialog.Builder(getActivity())
                 .setTitle("Confirmation")
                 .setMessage("New hike will be added:\nName: " + name + "\nLocation: " + location
                 + "\nDate of the hike: " + date + "\nParking available: " +
                         (parkingTag.equals("true") ? "Yes" : "No") + "\nLength of the hike: " +
-                        length + "\nDifficulty level: " + level + "\n\n Are you sure?")
+                        length + "\nDifficulty level: " + levelName[Math.toIntExact(level)] +
+                        "\n\n Are you sure?")
                 .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                 .setPositiveButton("Yes", (dialog, which) -> {
                     Hike hike = new Hike();
